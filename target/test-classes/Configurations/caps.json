@@ -1,0 +1,12 @@
+{
+	"platformName": "Android",
+	"platformVersion": "6.0",
+	"deviceName": "Nexus_4_API_23",
+	"app": "app/app-name",
+	"appPackage": "com.appPackage.appPackage",
+	"appWaitActivity": "com.appWaitActivity.appWaitActivity.SplashScreen",
+	"appActivity" : "com.appActivity.appActivity.SplashScreen",
+	"autoAcceptAlerts": true,
+	"autoGrantPermissions":true,
+	"newCommandTimeout": 2000
+}
