@@ -11,6 +11,7 @@ import org.jbehave.web.selenium.DelegatingWebDriverProvider;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.HashMap;
@@ -44,7 +45,7 @@ public class DriverProvider extends DelegatingWebDriverProvider {
 			return mobileDriver.getCurrentDriver();
 		} else {
 
-			return createFirefoxDriver();
+			return createEdgeDriver();
 		}
 	}
 
@@ -74,6 +75,13 @@ public class DriverProvider extends DelegatingWebDriverProvider {
 		capabilities.setCapability("marionette", true);
 		capabilities.setCapability("webdriver.gecko.driver", System.getProperty("user.dir") + OsUtil.getCrossPlatformFileName(browser));
 		return new FirefoxDriver(capabilities);
+	}
+	
+	public EdgeDriver createEdgeDriver() {
+		System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + OsUtil.getCrossPlatformFileName(browser));
+		DesiredCapabilities capabilities = DesiredCapabilities.edge();
+		capabilities.setCapability("marionette", true);
+		return new EdgeDriver();
 	}
 
 	@SuppressWarnings({ "rawtypes" })
