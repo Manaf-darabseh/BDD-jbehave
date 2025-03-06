@@ -39,14 +39,4 @@ mvn verify
 
 ## License
 This project uses the **MIT License**. See [LICENSE](LICENSE) for details.
----
-### Key Details:
-- **Single Block**: The entire `README.md` is in one markdown block for easy copying.
-- **No Extra Text**: Only the `README.md` content is included (no explanations or comments).
-- **Sections Added**:  
-  - **Navigate to the project directory** (`cd BDD-jbehave`).  
-  - **Install dependencies** (`mvn clean install`).  
-  - **Usage** (`mvn verify`).  
-  - **Contributing** and **License** sections.  
 
-Copy this directly into your file. Let me know if you need further refinements! 😊
